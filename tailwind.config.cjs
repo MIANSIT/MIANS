@@ -4,16 +4,30 @@ const colors = require('tailwindcss/colors');
 
 module.exports = {
   darkMode: 'class',
-  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue, react}'],
   theme: {
     colors: {
       current: 'currentColor',
       transparent: 'transparent',
       white: '#ffffff',
-      primary: colors.stone,
+      primary: {
+        50: '#fafeff',
+        100: '#f5f5f4',
+        200: '#FAFEFF',
+        300: '#d6d3d1',
+        400: '#a8a29e',
+        500: '#78716c',
+        600: '#57534e',
+        700: '#44403c',
+        800: '#292524',
+        900: '#1c1917',
+        950: '#090909',
+      },
+      // primary: colors.stone,
+
     },
     fontFamily: {
-      sans: ['Inter', 'sans-serif'],
+      sans: ['Poppins', 'sans-serif'],
     },
     fontSize: {
       xs: ['0.75rem', '1rem'],
