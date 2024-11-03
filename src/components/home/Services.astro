@@ -2,19 +2,37 @@
 const services = [
   {
     step: '01',
-    name: 'Design',
+    name: 'Custom Software Development',
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
   },
   {
     step: '02',
-    name: 'Develop',
+    name: 'Mobile App Development',
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
   },
   {
     step: '03',
-    name: 'Maintain',
+    name: 'Web Development',
+    description:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+  },
+  {
+    step: '04',
+    name: 'UI/UX Design',
+    description:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+  },
+  {
+    step: '05',
+    name: 'Quality Assurance and Testing',
+    description:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+  },
+  {
+    step: '06',
+    name: 'Software Maintenance and Support',
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
   },
@@ -31,7 +49,7 @@ const services = [
             <div class="bg-primary-500/10 dark:bg-primary-400/10 flex flex-col gap-12 rounded-3xl px-6 py-8">
               <p class="text-sm">{service.step}</p>
               <div class="flex flex-col gap-4">
-                <h3 class="text-xl font-medium">{service.name}</h3>
+                <h3 class="text-xl font-bold">{service.name}</h3>
                 <p class="text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg">
                   {service.description}
                 </p>

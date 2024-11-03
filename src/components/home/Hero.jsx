@@ -35,27 +35,30 @@ const Hero = () => {
   }, [currentText, isDeleting, index]);
 
   return (
-    <section class="py-16 sm:py-20">
-      <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-        <div class="flex flex-col gap-16">
-          <div class="flex flex-col items-start gap-8 sm:gap-10">
-            <div class="flex max-w-xl flex-col items-start gap-4 sm:gap-6">
-              <h1 class="text-4xl font-medium tracking-tight sm:text-5xl lg:text-6xl">
-                We design and build your next digital experience {currentText}
+    <section className="py-16 sm:py-20">
+      <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+        <div className="flex flex-col gap-16">
+          <div className="flex flex-col items-start gap-8 sm:gap-10">
+            <div className="flex max-w-xl flex-col items-start gap-4 sm:gap-6">
+              <h1 className="text-4xl font-medium tracking-tight sm:text-5xl lg:text-6xl">
+                We design and build your next digital experience <br/>
+                <div>
+                {currentText}
+                </div>
               </h1>
-              <p class="text-lg text-primary-950/70 dark:text-primary-200/70 sm:text-xl">
+              <p className="text-lg text-primary-950/70 dark:text-primary-200/70 sm:text-xl">
                 Anim aute id magna aliqua ad ad non deserunt sunt.
               </p>
             </div>
             <a
               href="/pricing"
-              class="inline-flex items-center justify-center rounded-full border border-transparent bg-primary-600 px-5 py-3 text-base font-medium text-white transition hover:bg-primary-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 dark:bg-primary-400 dark:text-primary-950 dark:hover:bg-primary-300 dark:focus-visible:outline-primary-400"
+              className="inline-flex items-center justify-center rounded-full border border-transparent bg-primary-600 px-5 py-3 text-base font-medium text-white transition hover:bg-primary-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 dark:bg-primary-400 dark:text-primary-950 dark:hover:bg-primary-300 dark:focus-visible:outline-primary-400"
             >
               Get started
             </a>
           </div>
           <img
-            class="h-auto w-full rounded-3xl"
+            className="h-auto w-full rounded-3xl"
             width="1280"
             height="640"
             src="/assets/hero.webp"
