@@ -42,9 +42,9 @@ const Hero = () => {
             <div className="flex max-w-xl flex-col items-start gap-4 sm:gap-6">
               <h1 className="text-4xl font-medium tracking-tight sm:text-5xl lg:text-6xl">
                 We design and build your next digital experience <br/>
-                <div>
+                
                 {currentText}
-                </div>
+                
               </h1>
               <p className="text-lg text-primary-950/70 dark:text-primary-200/70 sm:text-xl">
                 Anim aute id magna aliqua ad ad non deserunt sunt.
