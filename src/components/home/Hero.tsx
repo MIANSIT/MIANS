@@ -2,23 +2,6 @@
 import React, { useEffect, useState } from 'react';
 
 const Hero: React.FC = () => {
-  const styles = {
-    cursor: {
-      backgroundColor: 'black',
-      marginLeft: '0.5rem',
-      borderRadius: '1px',
-      animation: 'blink 1s infinite',
-    },
-    // Define keyframes for blink animation
-    '@keyframes blink': {
-      '0%, 100%': {
-        opacity: 1,
-      },
-      '50%': {
-        opacity: 0,
-      },
-    },
-  };
   const strings: string[] = [
     'Digital Services',
     'Custom App Development',
