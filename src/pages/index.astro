@@ -2,16 +2,15 @@
 import About from '../components/home/About.astro';
 import Cta from '../components/home/Cta.astro';
 import Expertise from '../components/home/Expertise.astro';
-import Hero from '../components/home/Hero.astro';
+import Hero from '../components/home/Hero';
 import Services from '../components/home/Services.astro';
 import Testimonials from '../components/home/Testimonials.astro';
 import Layout from '../layouts/Layout.astro';
-import Slider from '../components/Slider/Slider';
 ---
 
 <Layout description="MIANS Description" title="MIANS · Reflection of Your Desire">
-  <Slider client:load/>
-  <Hero />
+  <!-- <Hero /> -->
+  <Hero client:load />
   <Services />
   <Expertise />
   <About />
