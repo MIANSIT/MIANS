@@ -41,7 +41,7 @@ const Hero = () => {
           <div class="flex flex-col items-start gap-8 sm:gap-10">
             <div class="flex max-w-xl flex-col items-start gap-4 sm:gap-6">
               <h1 class="text-4xl font-medium tracking-tight sm:text-5xl lg:text-6xl">
-                We design and build your next digital experience
+                We design and build your next digital experience {currentText}
               </h1>
               <p class="text-lg text-primary-950/70 dark:text-primary-200/70 sm:text-xl">
                 Anim aute id magna aliqua ad ad non deserunt sunt.
