@@ -14,11 +14,11 @@ module.exports = {
         50: '#fafeff', // MIANS White Color 
         100: '#f5f5f4', 
         200: '#FAFEFF',
-        300: '#d6d3d1',
-        400: '#50505F', // Button Color -> Stone Grey for Black
+        300: '#C0C0C0', // Button Hover Color -> Light Grey Color for Dark
+        400: '#fafeff', // Button Color -> White Color for Dark
         500: '#78716c',
-        600: '#57534e', 
-        700: '#44403c',
+        600: '#090909', // Button Hover Color -> Black Color for Light
+        700: '#50505F', // Button Color -> Stone Gray Color for Light
         800: '#292524',
         900: '#1c1917',
         950: '#090909', // MIANS Black Color

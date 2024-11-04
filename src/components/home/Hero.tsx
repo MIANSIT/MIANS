@@ -47,7 +47,7 @@ const Hero: React.FC = () => {
           <div className="flex flex-col items-start gap-8 sm:gap-10">
             <div className="flex flex-col items-start gap-4 sm:gap-6">
               <h1 className="w-full text-4xl font-medium tracking-tight sm:text-5xl lg:text-6xl">
-                We are your one-stop solution for <span className="underline">{currentText}</span>
+                We are your one-stop solution <br /> for <span className="underline">{currentText}</span>
               </h1>
               <p className="text-lg text-primary-950/70 dark:text-primary-200/70 sm:text-xl">
                 We don't just develop solutions, we craft experiences that reflect your visions and
