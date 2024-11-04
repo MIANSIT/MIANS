@@ -1,7 +1,20 @@
 import React, { useState } from 'react';
 
 const Privacy: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('firstTab');
+  type TabKey =
+    | 'firstTab'
+    | 'secondTab'
+    | 'thirdTab'
+    | 'fourthTab'
+    | 'fifthTab'
+    | 'sixthTab'
+    | 'seventhTab'
+    | 'eigthTab'
+    | 'ninthTab'
+    | 'tenthTab'
+    | 'eleventhTab';
+
+  const [activeTab, setActiveTab] = useState<TabKey>('firstTab');
 
   const tabContent = {
     firstTab: {
@@ -258,7 +271,7 @@ const Privacy: React.FC = () => {
           <p className="py-2">
             If you have any further questions, concerns, or requests regarding this Privacy Policy
             or your personal data, please contact us at:
-            <a href="/miansofficial.com" className="px-2 font-semibold">
+            <a href="/MIANS/contact" className="px-2 font-semibold">
               MIANS Official
             </a>{' '}
             <br /> Email:{' '}
@@ -272,172 +285,65 @@ const Privacy: React.FC = () => {
   };
 
   return (
-    <section>
-      <div className="mx-auto max-w-6xl rounded-lg  p-6 shadow-lg">
+    <section className="p-4 dark:bg-black dark:text-white">
+      <div className="shadow-lg mx-auto max-w-6xl rounded-lg p-6">
         <h1 className="w-full py-4 text-4xl font-medium tracking-tight sm:text-5xl lg:text-6xl">
           Your Privacy is Our Priority.
         </h1>
         <p className="py-4 text-lg text-primary-950/70 dark:text-primary-200/70 sm:text-xl">
-          MIANS is fully dedicated to ensure and to protect your privacy. Our Privacy Policy
-          explains how we collect, utilize, disclose, and take care of your personal information. We
-          are committed to maintaining user information, security, and your privacy rights. This
-          policy tells us about any data we collect on our website and relevant services.
+          MIANS is fully dedicated to ensure and to protect your privacy...
         </p>
-        <div className="flex py-4">
-          <div className="border-gray-200 w-1/4 border-r">
+        <div className="flex flex-col md:flex-row py-4">
+          
+          {/* Sidebar for larger screens */}
+          <div className="hidden md:block md:w-1/4 border-r border-gray-200 dark:border-gray-700">
             <ul className="space-y-4">
-              <li>
-                <button
-                  onClick={() => setActiveTab('firstTab')}
-                  className={`block w-full px-4 py-2 text-left ${
-                    activeTab === 'firstTab'
-                      ? 'text-blue-600 border-blue-600 border-l-4 font-semibold'
-                      : 'text-gray-600'
-                  }`}
-                >
-                  Information We Collect
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => setActiveTab('secondTab')}
-                  className={`block w-full px-4 py-2 text-left ${
-                    activeTab === 'secondTab'
-                      ? 'text-blue-600 border-blue-600 border-l-4 font-semibold'
-                      : 'text-gray-600'
-                  }`}
-                >
-                  How We Use Your Information
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => setActiveTab('thirdTab')}
-                  className={`block w-full px-4 py-2 text-left ${
-                    activeTab === 'thirdTab'
-                      ? 'text-blue-600 border-blue-600 border-l-4 font-semibold'
-                      : 'text-gray-600'
-                  }`}
-                >
-                  Information Sharing and Disclosure
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => setActiveTab('fourthTab')}
-                  className={`block w-full px-4 py-2 text-left ${
-                    activeTab === 'fourthTab'
-                      ? 'text-blue-600 border-blue-600 border-l-4 font-semibold'
-                      : 'text-gray-600'
-                  }`}
-                >
-                  Data Security
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => setActiveTab('fifthTab')}
-                  className={`block w-full px-4 py-2 text-left ${
-                    activeTab === 'fifthTab'
-                      ? 'text-blue-600 border-blue-600 border-l-4 font-semibold'
-                      : 'text-gray-600'
-                  }`}
-                >
-                  Your Rights and Choices
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => setActiveTab('sixthTab')}
-                  className={`block w-full px-4 py-2 text-left ${
-                    activeTab === 'sixthTab'
-                      ? 'text-blue-600 border-blue-600 border-l-4 font-semibold'
-                      : 'text-gray-600'
-                  }`}
-                >
-                  Cookie Policy
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => setActiveTab('seventhTab')}
-                  className={`block w-full px-4 py-2 text-left ${
-                    activeTab === 'seventhTab'
-                      ? 'text-blue-600 border-blue-600 border-l-4 font-semibold'
-                      : 'text-gray-600'
-                  }`}
-                >
-                  Third-Party Links
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => setActiveTab('eigthTab')}
-                  className={`block w-full px-4 py-2 text-left ${
-                    activeTab === 'eigthTab'
-                      ? 'text-blue-600 border-blue-600 border-l-4 font-semibold'
-                      : 'text-gray-600'
-                  }`}
-                >
-                  Data Retention
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => setActiveTab('ninthTab')}
-                  className={`block w-full px-4 py-2 text-left ${
-                    activeTab === 'ninthTab'
-                      ? 'text-blue-600 border-blue-600 border-l-4 font-semibold'
-                      : 'text-gray-600'
-                  }`}
-                >
-                  International Data Transfers
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => setActiveTab('tenthTab')}
-                  className={`block w-full px-4 py-2 text-left ${
-                    activeTab === 'tenthTab'
-                      ? 'text-blue-600 border-blue-600 border-l-4 font-semibold'
-                      : 'text-gray-600'
-                  }`}
-                >
-                  Updates to Our Privacy Policy
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => setActiveTab('eleventhTab')}
-                  className={`block w-full px-4 py-2 text-left ${
-                    activeTab === 'eleventhTab'
-                      ? 'text-blue-600 border-blue-600 border-l-4 font-semibold'
-                      : 'text-gray-600'
-                  }`}
-                >
-                  Contact Us
-                </button>
-              </li>
+              {Object.keys(tabContent).map((tabKey) => (
+                <li key={tabKey}>
+                  <button
+                    onClick={() => setActiveTab(tabKey as TabKey)}
+                    className={`block w-full px-4 py-2 text-left ${
+                      activeTab === tabKey
+                        ? 'text-primary-600 border-primary-600 border-l-4 font-semibold'
+                        : 'text-gray-600 dark:text-gray-400'
+                    }`}
+                    aria-current={activeTab === tabKey ? 'page' : undefined}
+                  >
+                    {tabContent[tabKey as TabKey].title}
+                  </button>
+                </li>
+              ))}
             </ul>
           </div>
-          <div>
-            <select
-              className="border-gray-300 rounded border p-2"
-              value={activeTab}
-              onChange={(e) => setActiveTab(e.target.value)}
-            >
-              <option value="firstTab">Information We Collect</option>
-              <option value="secondTab">How We Use Your Information</option>
-            </select>
+          
+          {/* Dropdown for smaller screens */}
+          <div className="block md:hidden mb-4">
+          <select
+    className="border border-gray-300 rounded p-2 w-full dark:text-primary-50 dark:bg-primary-600 focus:border-primary-300 focus:outline-none"
+    value={activeTab}
+    onChange={(e) => setActiveTab(e.target.value as TabKey)}
+  >
+    {Object.keys(tabContent).map((tabKey) => (
+      <option 
+        key={tabKey} 
+        value={tabKey} 
+      
+      >
+        {tabContent[tabKey as TabKey].title}
+      </option>
+    ))}
+  </select>
           </div>
+          
           {/* Tab Content */}
-          <div className="w-3/4 pl-6">
-            <div className="text-gray-600 mt-4">{tabContent[activeTab].content}</div>
+          <div className="md:w-3/4 md:pl-6">
+            <div className="text-gray-600 dark:text-gray-300 mt-4">{tabContent[activeTab].content}</div>
           </div>
         </div>
       </div>
     </section>
   );
 };
+
 
 export default Privacy;

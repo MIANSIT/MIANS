@@ -1,11 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Privacy from '../components/privacy/Privacy';
+import PrivacyComponent from '../components/privacy/Privacy.tsx';
 ---
 
 <Layout
   description="Our privacy policy will help you understand what information is collected and how it is used."
   title="Privacy policy · MIANS"
 >
-  <Privacy client:load/>
+  <PrivacyComponent client:load/>
 </Layout>
