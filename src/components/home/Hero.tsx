@@ -58,23 +58,37 @@ const Hero: React.FC = () => {
               </p>
             </div>
             <a
-              href="/pricing"
+              href="/contact"
               className="inline-flex items-center justify-center rounded-full border border-transparent bg-primary-600 px-5 py-3 text-base font-medium text-white transition hover:bg-primary-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 dark:bg-primary-400 dark:text-primary-950 dark:hover:bg-primary-300 dark:hover:text-primary-50 dark:focus-visible:outline-primary-400"
             >
               Begin Your Journey{' '}
             </a>
           </div>
           <div className="rounded-3xl py-10 shadow-dark-md">
-            <div className="flex items-center justify-center gap-10 text-white">
-              <h1 className="animate-gazzle-text-light dark:animate-gazzle-text-dark relative text-5xl font-bold">
+            <div className="flex flex-col items-center justify-center gap-6 text-white lg:flex-row lg:gap-10">
+              <h1 className="relative animate-gazzle-text-light text-5xl font-bold dark:animate-gazzle-text-dark">
                 <span>Design</span>
               </h1>
-              <span className="text-orange-500 animate-gazzle-text-light dark:animate-gazzle-text-dark text-3xl">•</span>
-              <h1 className="animate-gazzle-text-light dark:animate-gazzle-text-dark relative text-5xl font-bold">
+              {/* Arrow icon for mobile and tablet screens */}
+              <span className="animate-gazzle-text-light text-3xl text-white dark:animate-gazzle-text-dark lg:hidden">
+                ↓
+              </span>
+              {/* Bullet icon for large screens */}
+              <span className="text-orange-500 hidden animate-gazzle-text-light text-3xl dark:animate-gazzle-text-dark lg:inline">
+                •
+              </span>
+
+              <h1 className="relative animate-gazzle-text-light text-5xl font-bold dark:animate-gazzle-text-dark">
                 <span>Develop</span>
               </h1>
-              <span className="text-orange-500 animate-gazzle-text-light dark:animate-gazzle-text-dark text-3xl">•</span>
-              <h1 className="animate-gazzle-text-light dark:animate-gazzle-text-dark relative text-5xl font-bold">
+              <span className="animate-gazzle-text-light text-3xl text-white dark:animate-gazzle-text-dark lg:hidden">
+                ↓
+              </span>
+              <span className="text-orange-500 hidden animate-gazzle-text-light text-3xl dark:animate-gazzle-text-dark lg:inline">
+                •
+              </span>
+
+              <h1 className="relative animate-gazzle-text-light text-5xl font-bold dark:animate-gazzle-text-dark">
                 <span>Deploy</span>
               </h1>
             </div>
