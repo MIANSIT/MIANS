@@ -68,7 +68,7 @@ const Hero: React.FC = () => {
             className="h-auto w-full rounded-3xl"
             width="1280"
             height="640"
-            src="/assets/hero.webp"
+            src="/MIANS/assets/hero.webp"
             alt="Hero picture"
           />
         </div>
