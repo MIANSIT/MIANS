@@ -1,4 +1,3 @@
-// Slider.jsx
 import React, { useEffect, useState } from 'react';
 
 const Hero: React.FC = () => {
@@ -47,7 +46,8 @@ const Hero: React.FC = () => {
           <div className="flex flex-col items-start gap-8 sm:gap-10">
             <div className="flex flex-col items-start gap-4 sm:gap-6">
               <h1 className="w-full text-4xl font-medium tracking-tight sm:text-5xl lg:text-6xl">
-                We are your one-stop solution <br /> for <span className="underline">{currentText}</span>
+                We are your one-stop solution <br /> for{' '}
+                <span className="underline">{currentText}</span>
               </h1>
               <p className="text-lg text-primary-950/70 dark:text-primary-200/70 sm:text-xl">
                 We don't just develop solutions, we craft experiences that reflect your visions and
@@ -64,13 +64,21 @@ const Hero: React.FC = () => {
               Begin Your Journey{' '}
             </a>
           </div>
-          <img
-            className="h-auto w-full rounded-3xl"
-            width="1280"
-            height="640"
-            src="/MIANS/assets/hero.webp"
-            alt="Hero picture"
-          />
+          <div className="rounded-3xl py-10 shadow-dark-md">
+            <div className="flex items-center justify-center gap-10 text-white">
+              <h1 className="animate-gazzle-text-light dark:animate-gazzle-text-dark relative text-5xl font-bold">
+                <span>Design</span>
+              </h1>
+              <span className="text-orange-500 animate-gazzle-text-light dark:animate-gazzle-text-dark text-3xl">•</span>
+              <h1 className="animate-gazzle-text-light dark:animate-gazzle-text-dark relative text-5xl font-bold">
+                <span>Develop</span>
+              </h1>
+              <span className="text-orange-500 animate-gazzle-text-light dark:animate-gazzle-text-dark text-3xl">•</span>
+              <h1 className="animate-gazzle-text-light dark:animate-gazzle-text-dark relative text-5xl font-bold">
+                <span>Deploy</span>
+              </h1>
+            </div>
+          </div>
         </div>
       </div>
     </section>
