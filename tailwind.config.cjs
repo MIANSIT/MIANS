@@ -11,17 +11,17 @@ module.exports = {
       transparent: 'transparent',
       white: '#ffffff',
       primary: {
-        50: '#fafeff',
-        100: '#f5f5f4',
+        50: '#fafeff', // MIANS White Color 
+        100: '#f5f5f4', 
         200: '#FAFEFF',
         300: '#d6d3d1',
-        400: '#a8a29e',
+        400: '#50505F', // Button Color -> Stone Grey for Black
         500: '#78716c',
-        600: '#57534e',
+        600: '#57534e', 
         700: '#44403c',
         800: '#292524',
         900: '#1c1917',
-        950: '#090909',
+        950: '#090909', // MIANS Black Color
       },
       // primary: colors.stone,
 

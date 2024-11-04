@@ -9,6 +9,6 @@ export default defineConfig({
   base: '/MIANS',
   integrations: [tailwind(), compress(), react()],
   experimental: {
-    // viewTransitions: true
+    viewTransitions: true
   }
 });
