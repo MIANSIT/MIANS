@@ -304,7 +304,7 @@ const Privacy: React.FC = () => {
                     onClick={() => setActiveTab(tabKey as TabKey)}
                     className={`block w-full px-4 py-2 text-left ${
                       activeTab === tabKey
-                        ? 'text-primary-600 border-primary-600 border-l-4 font-semibold'
+                        ? 'text-primary-50 border-primary-50 border-l-4 font-semibold'
                         : 'text-gray-600 dark:text-gray-400'
                     }`}
                     aria-current={activeTab === tabKey ? 'page' : undefined}
