@@ -8,4 +8,7 @@ export default defineConfig({
   site: 'https://miansit.github.io',
   base: '/MIANS',
   integrations: [tailwind(), compress(), react()],
+  experimental: {
+    viewTransitions: true
+  }
 });
