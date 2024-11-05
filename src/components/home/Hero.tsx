@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
   const [index, setIndex] = useState<number>(0);
   const [isDeleting, setIsDeleting] = useState<boolean>(false);
   const [showSecondSet, setShowSecondSet] = useState<boolean>(false);
-  const [fadeOut, setFadeOut] = useState<boolean>(false);
+  const [fadeIn, setFadeIn] = useState<boolean>(false);
 
   const typeSpeed: number = 150;
   const backSpeed: number = 70;
@@ -43,10 +43,10 @@ const Hero: React.FC = () => {
 
   useEffect(() => {
     const toggleSets = () => {
-      setFadeOut(true);
+      setFadeIn(true);
       setTimeout(() => {
         setShowSecondSet((prev) => !prev);
-        setFadeOut(false);
+        setFadeIn(false);
       }, 1000); // Duration of fade out
     };
 
@@ -80,42 +80,42 @@ const Hero: React.FC = () => {
             </a>
           </div>
           <div className="rounded-3xl py-10 shadow-dark-md">
-            <div className={`flex flex-col items-center justify-center gap-6 text-white lg:flex-row lg:gap-10 transition-all duration-1000 ${fadeOut ? 'opacity-0 translate-y-10' : 'opacity-100 translate-y-0'}`}>
+            <div className={`flex flex-col items-center justify-center gap-6 text-white lg:flex-row lg:gap-10 transition-all duration-1000 ${fadeIn ? 'opacity-0 translate-y-10' : 'opacity-100 translate-y-0'}`}>
               {/* First Set */}
               {!showSecondSet ? (
                 <>
-                  <h1 className={`relative animate-gazzle-text-light text-5xl font-bold dark:animate-gazzle-text-dark transition-all duration-1000 ${fadeOut ? 'translate-y-[-20px]' : 'translate-y-0'}`}>
-                    <span>Design</span>
+                  <h1 className={`relative animate-gazzle-text-light text-5xl font-bold dark:animate-gazzle-text-dark transition-all duration-1000 ${fadeIn ? 'translate-y-[-20px]' : 'translate-y-0'}`}>
+                    <span>Developing</span>
                   </h1>
                   <span className="animate-gazzle-text-light text-3xl text-white dark:animate-gazzle-text-dark lg:hidden">↓</span>
                   <span className="text-orange-500 hidden animate-gazzle-text-light text-3xl dark:animate-gazzle-text-dark lg:inline">•</span>
 
-                  <h1 className={`relative animate-gazzle-text-light text-5xl font-bold dark:animate-gazzle-text-dark transition-all duration-1000 ${fadeOut ? 'translate-y-[-20px]' : 'translate-y-0'}`}>
-                    <span>Develop</span>
+                  <h1 className={`relative animate-gazzle-text-light text-5xl font-bold dark:animate-gazzle-text-dark transition-all duration-1000 ${fadeIn ? 'translate-y-[-20px]' : 'translate-y-0'}`}>
+                    <span>Testing</span>
                   </h1>
                   <span className="animate-gazzle-text-light text-3xl text-white dark:animate-gazzle-text-dark lg:hidden">↓</span>
                   <span className="text-orange-500 hidden animate-gazzle-text-light text-3xl dark:animate-gazzle-text-dark lg:inline">•</span>
 
-                  <h1 className={`relative animate-gazzle-text-light text-5xl font-bold dark:animate-gazzle-text-dark transition-all duration-1000 ${fadeOut ? 'translate-y-[-20px]' : 'translate-y-0'}`}>
-                    <span>Deploy</span>
+                  <h1 className={`relative animate-gazzle-text-light text-5xl font-bold dark:animate-gazzle-text-dark transition-all duration-1000 ${fadeIn ? 'translate-y-[-20px]' : 'translate-y-0'}`}>
+                    <span>Deploying</span>
                   </h1>
                 </>
               ) : (
                 // Second Set
                 <>
-                  <h1 className={`relative animate-gazzle-text-light text-5xl font-bold dark:animate-gazzle-text-dark transition-all duration-1000 ${fadeOut ? 'translate-y-10' : 'translate-y-0'}`}>
+                  <h1 className={`relative animate-gazzle-text-light text-5xl font-bold dark:animate-gazzle-text-dark transition-all duration-1000 ${fadeIn ? 'translate-y-10' : 'translate-y-0'}`}>
                     <span>Consulting</span>
                   </h1>
                   <span className="animate-gazzle-text-light text-3xl text-white dark:animate-gazzle-text-dark lg:hidden">↓</span>
                   <span className="text-orange-500 hidden animate-gazzle-text-light text-3xl dark:animate-gazzle-text-dark lg:inline">•</span>
 
-                  <h1 className={`relative animate-gazzle-text-light text-5xl font-bold dark:animate-gazzle-text-dark transition-all duration-1000 ${fadeOut ? 'translate-y-10' : 'translate-y-0'}`}>
+                  <h1 className={`relative animate-gazzle-text-light text-5xl font-bold dark:animate-gazzle-text-dark transition-all duration-1000 ${fadeIn ? 'translate-y-10' : 'translate-y-0'}`}>
                     <span>Wireframing</span>
                   </h1>
                   <span className="animate-gazzle-text-light text-3xl text-white dark:animate-gazzle-text-dark lg:hidden">↓</span>
                   <span className="text-orange-500 hidden animate-gazzle-text-light text-3xl dark:animate-gazzle-text-dark lg:inline">•</span>
 
-                  <h1 className={`relative animate-gazzle-text-light text-5xl font-bold dark:animate-gazzle-text-dark transition-all duration-1000 ${fadeOut ? 'translate-y-10' : 'translate-y-0'}`}>
+                  <h1 className={`relative animate-gazzle-text-light text-5xl font-bold dark:animate-gazzle-text-dark transition-all duration-1000 ${fadeIn ? 'translate-y-10' : 'translate-y-0'}`}>
                     <span>UI/UX</span>
                   </h1>
                 </>
