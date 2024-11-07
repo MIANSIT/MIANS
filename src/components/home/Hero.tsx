@@ -11,9 +11,6 @@ const Hero: React.FC = () => {
   const [currentText, setCurrentText] = useState<string>('');
   const [index, setIndex] = useState<number>(0);
   const [isDeleting, setIsDeleting] = useState<boolean>(false);
-  const [showSecondSet, setShowSecondSet] = useState<boolean>(false);
-  const [fadeIn, setFadeIn] = useState<boolean>(false);
-
   const typeSpeed: number = 150;
   const backSpeed: number = 70;
   const pauseTime: number = 1500;
@@ -41,19 +38,6 @@ const Hero: React.FC = () => {
     return () => clearTimeout(timer);
   }, [currentText, isDeleting, index]);
 
-  useEffect(() => {
-    const toggleSets = () => {
-      setFadeIn(true);
-      setTimeout(() => {
-        setShowSecondSet((prev) => !prev);
-        setFadeIn(false);
-      }, 1000); // Duration of fade out
-    };
-
-    const timer = setInterval(toggleSets, 5000); // Toggle every 5 seconds
-    return () => clearInterval(timer);
-  }, []);
-
   return (
     <section className="py-16 sm:py-20">
       <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
@@ -74,53 +58,10 @@ const Hero: React.FC = () => {
             </div>
             <a
               href="/contact"
-              className="inline-flex items-center justify-center rounded-full border border-transparent bg-primary-600 px-5 py-3 text-base font-medium text-white transition hover:bg-primary-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 dark:bg-primary-400 dark:text-primary-950 dark:hover:bg-primary-300 dark:hover:text-primary-50 dark:focus-visible:outline-primary-400"
+              className="inline-flex items-center justify-center rounded-lg border border-transparent bg-primary-600 px-5 py-3 text-base font-medium text-white transition hover:bg-primary-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 dark:bg-primary-400 dark:text-primary-950 dark:hover:bg-primary-300 dark:hover:text-primary-50 dark:focus-visible:outline-primary-400"
             >
               Begin Your Journey
             </a>
-          </div>
-          <div className="rounded-3xl py-10 shadow-dark-md">
-            <div className={`flex flex-col items-center justify-center gap-6 text-white lg:flex-row lg:gap-10 transition-all duration-1000 ${fadeIn ? 'opacity-0 translate-y-10' : 'opacity-100 translate-y-0'}`}>
-              {/* First Set */}
-              {!showSecondSet ? (
-                <>
-                  <h1 className={`relative animate-gazzle-text-light text-5xl font-bold dark:animate-gazzle-text-dark transition-all duration-1000 ${fadeIn ? 'translate-y-[-20px]' : 'translate-y-0'}`}>
-                    <span>Developing</span>
-                  </h1>
-                  <span className="animate-gazzle-text-light text-3xl text-white dark:animate-gazzle-text-dark lg:hidden">↓</span>
-                  <span className="text-orange-500 hidden animate-gazzle-text-light text-3xl dark:animate-gazzle-text-dark lg:inline">•</span>
-
-                  <h1 className={`relative animate-gazzle-text-light text-5xl font-bold dark:animate-gazzle-text-dark transition-all duration-1000 ${fadeIn ? 'translate-y-[-20px]' : 'translate-y-0'}`}>
-                    <span>Testing</span>
-                  </h1>
-                  <span className="animate-gazzle-text-light text-3xl text-white dark:animate-gazzle-text-dark lg:hidden">↓</span>
-                  <span className="text-orange-500 hidden animate-gazzle-text-light text-3xl dark:animate-gazzle-text-dark lg:inline">•</span>
-
-                  <h1 className={`relative animate-gazzle-text-light text-5xl font-bold dark:animate-gazzle-text-dark transition-all duration-1000 ${fadeIn ? 'translate-y-[-20px]' : 'translate-y-0'}`}>
-                    <span>Deploying</span>
-                  </h1>
-                </>
-              ) : (
-                // Second Set
-                <>
-                  <h1 className={`relative animate-gazzle-text-light text-5xl font-bold dark:animate-gazzle-text-dark transition-all duration-1000 ${fadeIn ? 'translate-y-10' : 'translate-y-0'}`}>
-                    <span>Consulting</span>
-                  </h1>
-                  <span className="animate-gazzle-text-light text-3xl text-white dark:animate-gazzle-text-dark lg:hidden">↓</span>
-                  <span className="text-orange-500 hidden animate-gazzle-text-light text-3xl dark:animate-gazzle-text-dark lg:inline">•</span>
-
-                  <h1 className={`relative animate-gazzle-text-light text-5xl font-bold dark:animate-gazzle-text-dark transition-all duration-1000 ${fadeIn ? 'translate-y-10' : 'translate-y-0'}`}>
-                    <span>Wireframing</span>
-                  </h1>
-                  <span className="animate-gazzle-text-light text-3xl text-white dark:animate-gazzle-text-dark lg:hidden">↓</span>
-                  <span className="text-orange-500 hidden animate-gazzle-text-light text-3xl dark:animate-gazzle-text-dark lg:inline">•</span>
-
-                  <h1 className={`relative animate-gazzle-text-light text-5xl font-bold dark:animate-gazzle-text-dark transition-all duration-1000 ${fadeIn ? 'translate-y-10' : 'translate-y-0'}`}>
-                    <span>UI/UX</span>
-                  </h1>
-                </>
-              )}
-            </div>
           </div>
         </div>
       </div>
