@@ -84,7 +84,7 @@ const Services = () => {
               <div className="border-gray-300 absolute h-[350px] w-[350px] rounded-full border-4"></div>
 
               {/* Center Text */}
-              <div className="bg-gray-800 relative z-10 flex h-24 w-24 items-center justify-center rounded-full text-center text-white">
+              <div className="bg-gray-800 relative z-10 flex h-24 w-24 items-center justify-center rounded-full text-center dark:text-primary-50 text-primary-600">
                 Your Vision
               </div>
 
