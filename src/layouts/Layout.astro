@@ -43,6 +43,10 @@ const { description, title } = Astro.props;
       [x-cloak] {
         display: none !important;
       }
+      .custom-justify {
+    hyphens: auto;          /* Enables word breaking with hyphens */
+    word-spacing: 0.01em;   /* Adds slight space between words */
+  }
     </style>
     <script>
       import Alpine from 'alpinejs';
