@@ -61,7 +61,7 @@ const Services = () => {
   const iconRadius = 160;
 
   return (
-    <section className="py-16 sm:py-20">
+    <section className="py-16 sm:py-20"  id="services">
       <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
         <h2 className="mb-12 text-left text-3xl font-medium tracking-tight sm:text-4xl">
           Services
