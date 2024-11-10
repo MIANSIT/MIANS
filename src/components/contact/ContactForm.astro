@@ -38,6 +38,21 @@
             class="hover:ring-primary-600 focus:ring-primary-600 dark:hover:ring-primary-400 dark:focus:ring-primary-400 bg-primary-50 dark:bg-primary-950 ring-primary-900/40 dark:ring-primary-200/40 placeholder:text-primary-950/60 dark:placeholder:text-primary-200/60 block w-full appearance-none rounded-md border-0 px-4 py-4 text-base ring-1 transition focus:outline-none focus:ring-2"
             placeholder="Email"
             required
+            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+
+          />
+        </div>
+        <div>
+          <label for="phone" class="sr-only">Phone Number</label>
+          <input 
+              type="tel"
+              name="phone"
+              id="phone"
+              autocomplete="tel"
+              class="hover:ring-primary-600 focus:ring-primary-600 dark:hover:ring-primary-400 dark:focus:ring-primary-400 bg-primary-50 dark:bg-primary-950 ring-primary-900/40 dark:ring-primary-200/40 placeholder:text-primary-950/60 dark:placeholder:text-primary-200/60 block w-full appearance-none rounded-md border-0 px-4 py-4 text-base ring-1 transition focus:outline-none focus:ring-2"
+              placeholder="Phone Number"
+              required
+              pattern="^\+?\d{10,15}$"
           />
         </div>
 
@@ -65,7 +80,7 @@
 
       <!-- Popup Message -->
       <div id="successPopup" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center">
-        <div class="bg-primary-600 text-primary-100 dark:bg-primary-100 dark:text-primary-600 rounded-lg p-6 relative max-w-sm mx-auto">
+        <div class="bg-primary-600  text-primary-100 dark:bg-primary-100 dark:text-primary-600 rounded-lg p-6 relative max-w-sm mx-auto">
           <button id="closePopup" class="absolute top-2 right-2 text-gray-500 hover:text-gray-700">&times;</button>
           <h3 class="text-xl font-medium">Form submitted successfully!</h3>
           <p class="mt-2">Thank you! The form has been submitted successfully. We will reply to you soon!</p>
@@ -76,16 +91,33 @@
 </section>
 
 <script>
-const form = document.getElementById("contactForm");
+const form = document.getElementById("contactForm") as HTMLFormElement | null;
+const email = document.getElementById("email") as HTMLInputElement | null;
+const phone = document.getElementById("phone") as HTMLInputElement | null;
 const closePopupButton = document.getElementById("closePopup");
 const successPopup = document.getElementById("successPopup");
-const submitButton = form?.querySelector("button[type='submit']") as HTMLButtonElement; // Explicitly cast to HTMLButtonElement
+const submitButton = form?.querySelector("button[type='submit']") as HTMLButtonElement | null;
 
-if (form && closePopupButton && successPopup && submitButton) {
+if (form && email && phone && closePopupButton && successPopup && submitButton) {
+  const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  const phonePattern = /^\+?\d{10,15}$/;
+
   form.addEventListener("submit", async function (event) {
-    event.preventDefault(); // Prevent the default form submission
+    event.preventDefault();
 
-    const formData = new FormData(form as HTMLFormElement);
+    if (!emailPattern.test(email.value)) {
+      alert("Please enter a valid email address.");
+      email.focus();
+      return;
+    }
+
+    if (!phonePattern.test(phone.value)) {
+      alert("Please enter a valid phone number.");
+      phone.focus();
+      return;
+    }
+
+    const formData = new FormData(form); // TypeScript now recognizes 'form' as HTMLFormElement
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -94,11 +126,10 @@ if (form && closePopupButton && successPopup && submitButton) {
       });
 
       if (response.ok) {
-        // Show the success popup by removing 'hidden' and adding 'flex'
         successPopup.classList.remove("hidden");
         successPopup.classList.add("flex");
-        submitButton.disabled = true; // Disable the submit button
-        (form as HTMLFormElement).reset(); // Clear the form fields
+        submitButton.disabled = true; // Explicitly typed as HTMLButtonElement, so no error here
+        form.reset();
       } else {
         console.error("Error submitting form:", response.statusText);
       }
@@ -107,11 +138,11 @@ if (form && closePopupButton && successPopup && submitButton) {
     }
   });
 
-  // Close popup on button click
   closePopupButton.addEventListener("click", function () {
-    successPopup.classList.add("hidden"); // Hide the popup
+    successPopup.classList.add("hidden");
     successPopup.classList.remove("flex");
-    submitButton.disabled = false; // Enable the submit button again
+    submitButton.disabled = false;
   });
 }
+
 </script>
