@@ -56,12 +56,20 @@ const Hero: React.FC = () => {
                 into impactful solutions!
               </p>
             </div>
-            <a
-              href="/MIANS/contact"
-              className="inline-flex items-center justify-center rounded-lg border border-transparent bg-primary-600 px-5 py-3 text-base font-medium text-white transition hover:bg-primary-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 dark:bg-primary-400 dark:text-primary-950 dark:hover:bg-primary-300 dark:hover:text-primary-50 dark:focus-visible:outline-primary-400"
-            >
-              Begin Your Journey
-            </a>
+            <div className="flex gap-4">
+              <a
+                href="/MIANS/contact"
+                className="inline-flex items-center justify-center rounded-lg border border-transparent bg-primary-600 px-5 py-3 text-base font-medium text-white transition hover:bg-primary-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 dark:bg-primary-400 dark:text-primary-950 dark:hover:bg-primary-300 dark:hover:text-primary-50 dark:focus-visible:outline-primary-400"
+              >
+                Begin Your Journey
+              </a>
+              <a
+                href="tel:+8801761867763"
+                className="inline-flex items-center justify-center rounded-lg border border-transparent bg-primary-600 px-5 py-3 text-base font-medium text-white transition hover:bg-primary-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 dark:bg-primary-400 dark:text-primary-950 dark:hover:bg-primary-300 dark:hover:text-primary-50 dark:focus-visible:outline-primary-400"
+              >
+                Call MIANS
+              </a>
+            </div>
           </div>
         </div>
       </div>
