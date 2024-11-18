@@ -13,37 +13,37 @@ const services = [
     icon: <FaChalkboardTeacher size={30} />,
     name: 'Consulting',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'We approach understanding your unique challenges, deep diving into your business story and guidelines, and collaborating with your idea to find the best solutions, which can deliver real-time results',
   },
   {
     icon: <FaDrawPolygon size={30} />,
     name: 'Wireframing',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'We create your ideas into structured layouts through our wireframing service, converting your vision into clear and user-friendly designs. Our wireframes help you  to visualize your project’s work flow and functionality, making development more smoother and efficient',
   },
   {
     icon: <FaUserCheck size={30} />,
     name: 'UI/UX',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'MIANS crafts visual-dependent interfaces that not only look great but guide users effectively. Whether for websites or apps, we offer user-friendly experiences to engage the targeted users through our designs',
   },
   {
     icon: <FaLaptopCode size={30} />,
     name: 'Developing',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'Our development approach takes your project to the next level, integrating innovation with reliability. We deliver high-performance, scalable solutions that are flawless for your business growth. Which ensures a reflective digital experience for your users and real impact for your brand',
   },
   {
     icon: <FaSearch size={30} />,
     name: 'Testing',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'We create your ideas into structured layouts through our wireframing service, converting your vision into clear and user-friendly designs. Our wireframes help you  to visualize your project’s work flow and functionality, making development more smoother and efficient',
   },
   {
     icon: <FaCloudUploadAlt size={30} />,
     name: 'Deploying',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'We take the headache out of launching your application. From app security to smooth integration our team dedicatedly manages everything. We  ensure your deployment is flawless. With MIANS, while we handle the technical details, making sure your product is live, stable, and ready to run your business seamlessly and your users or clients impression get the peek',
   },
 ];
 
@@ -61,7 +61,7 @@ const Services = () => {
   const iconRadius = 160;
 
   return (
-    <section className="py-16 sm:py-20"  id="services">
+    <section className="py-16 sm:py-20" id="services">
       <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
         <h2 className="mb-12 text-left text-3xl font-medium tracking-tight sm:text-4xl">
           Services
@@ -84,7 +84,7 @@ const Services = () => {
               <div className="border-gray-300 absolute h-[350px] w-[350px] rounded-full border-4"></div>
 
               {/* Center Text */}
-              <div className="bg-gray-800 relative z-10 flex h-24 w-24 items-center justify-center rounded-full text-center dark:text-primary-50 text-primary-600">
+              <div className="bg-gray-800 relative z-10 flex h-24 w-24 items-center justify-center rounded-full text-center text-primary-600 dark:text-primary-50">
                 Your Vision
               </div>
 
