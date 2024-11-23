@@ -138,12 +138,14 @@ const links = [
       <div
         class="bg-primary-500/10 dark:bg-primary-400/10 hidden items-center justify-center rounded-3xl px-6 py-8 lg:flex"
       >
-        <p
-          class="text-primary-950/70 dark:text-primary-200/70 max-w-sm text-xl italic leading-loose"
-        >
-          <span class="font-medium">Stone</span> is a premium Astro theme specially designed for
-          Business, Marketing, SaaS and Startup websites.
-        </p>
+      <span class="sr-only">MIANS</span>
+      <img
+        class="h-30 w-auto"
+        width="65"
+        height="40"
+      :src="$store.theme.isDark ? '/MIANS/assets/icon1.png' : '/MIANS/assets/icon2.png'"
+        alt="MIANS"
+      />
       </div>
 
       <!-- Navigation -->
