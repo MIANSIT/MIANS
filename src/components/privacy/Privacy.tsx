@@ -271,7 +271,7 @@ const Privacy: React.FC = () => {
           <p className="py-2">
             If you have any further questions, concerns, or requests regarding this Privacy Policy
             or your personal data, please contact us at:
-            <a href="/MIANS/contact" className="px-2 font-semibold">
+            <a href="/contact" className="px-2 font-semibold">
               MIANS Official
             </a>{' '}
             <br /> Email:{' '}
@@ -303,7 +303,7 @@ const Privacy: React.FC = () => {
                     onClick={() => setActiveTab(tabKey as TabKey)}
                     className={`block w-full px-4 py-2 text-left ${
                       activeTab === tabKey
-                        ? 'border-l-4 dark:border-primary-50 font-semibold dark:text-primary-50 border-primary-950 text-primary-950'
+                        ? 'border-l-4 border-primary-950 font-semibold text-primary-950 dark:border-primary-50 dark:text-primary-50'
                         : 'text-gray-600 dark:text-gray-400'
                     }`}
                     aria-current={activeTab === tabKey ? 'page' : undefined}
