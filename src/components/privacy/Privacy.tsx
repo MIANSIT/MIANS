@@ -285,7 +285,7 @@ const Privacy: React.FC = () => {
   };
 
   return (
-    <section className="p-4 dark:bg-black dark:text-white">
+    <section className="dark:bg-black p-4 dark:text-white">
       <div className="shadow-lg mx-auto max-w-6xl rounded-lg p-6">
         <h1 className="w-full py-4 text-4xl font-medium tracking-tight sm:text-5xl lg:text-6xl">
           Your Privacy is Our Priority.
@@ -293,10 +293,9 @@ const Privacy: React.FC = () => {
         <p className="py-4 text-lg text-primary-950/70 dark:text-primary-200/70 sm:text-xl">
           MIANS is fully dedicated to ensure and to protect your privacy...
         </p>
-        <div className="flex flex-col md:flex-row py-4">
-          
+        <div className="flex flex-col py-4 md:flex-row">
           {/* Sidebar for larger screens */}
-          <div className="hidden md:block md:w-1/4 border-r border-gray-200 dark:border-gray-700">
+          <div className="border-gray-200 dark:border-gray-700 hidden border-r md:block md:w-1/4">
             <ul className="space-y-4">
               {Object.keys(tabContent).map((tabKey) => (
                 <li key={tabKey}>
@@ -304,7 +303,7 @@ const Privacy: React.FC = () => {
                     onClick={() => setActiveTab(tabKey as TabKey)}
                     className={`block w-full px-4 py-2 text-left ${
                       activeTab === tabKey
-                        ? 'text-primary-50 border-primary-50 border-l-4 font-semibold'
+                        ? 'border-l-4 dark:border-primary-50 font-semibold dark:text-primary-50 border-primary-950 text-primary-950'
                         : 'text-gray-600 dark:text-gray-400'
                     }`}
                     aria-current={activeTab === tabKey ? 'page' : undefined}
@@ -315,35 +314,32 @@ const Privacy: React.FC = () => {
               ))}
             </ul>
           </div>
-          
+
           {/* Dropdown for smaller screens */}
-          <div className="block md:hidden mb-4">
-          <select
-    className="border border-gray-300 rounded p-2 w-full dark:text-primary-50 dark:bg-primary-600 focus:border-primary-300 focus:outline-none"
-    value={activeTab}
-    onChange={(e) => setActiveTab(e.target.value as TabKey)}
-  >
-    {Object.keys(tabContent).map((tabKey) => (
-      <option 
-        key={tabKey} 
-        value={tabKey} 
-      
-      >
-        {tabContent[tabKey as TabKey].title}
-      </option>
-    ))}
-  </select>
+          <div className="mb-4 block md:hidden">
+            <select
+              className="border-gray-300 w-full rounded border p-2 focus:border-primary-300 focus:outline-none dark:bg-primary-600 dark:text-primary-50"
+              value={activeTab}
+              onChange={(e) => setActiveTab(e.target.value as TabKey)}
+            >
+              {Object.keys(tabContent).map((tabKey) => (
+                <option key={tabKey} value={tabKey}>
+                  {tabContent[tabKey as TabKey].title}
+                </option>
+              ))}
+            </select>
           </div>
-          
+
           {/* Tab Content */}
           <div className="md:w-3/4 md:pl-6">
-            <div className="text-gray-600 dark:text-gray-300 mt-4">{tabContent[activeTab].content}</div>
+            <div className="text-gray-600 dark:text-gray-300 mt-4">
+              {tabContent[activeTab].content}
+            </div>
           </div>
         </div>
       </div>
     </section>
   );
 };
-
 
 export default Privacy;

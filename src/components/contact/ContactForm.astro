@@ -2,10 +2,19 @@
   <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
     <div class="grid gap-12 lg:grid-cols-2 lg:gap-8">
       <div class="flex flex-col gap-4 sm:gap-6">
-        <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Let's work together</h2>
-        <p class="text-primary-950/70 dark:text-primary-200/70 max-w-lg text-lg sm:text-xl">
-          We'd love to learn more about you and what we can build together.
+        <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Let’s take our first leap</h2>
+        <p class="max-w-lg text-lg sm:text-xl">
+          together to turn your ideas into a reality.
         </p>
+        <div class="pl-20 pt-8 hidden lg:block">
+          <span class="sr-only">MIANS</span>
+          <img
+            width="200"
+            height="80"
+            :src="$store.theme.isDark ? '/MIANS/assets/icon3.png' : '/MIANS/assets/icon2.png'"
+            alt="MIANS"
+          />
+        </div>
       </div>
 
       <!-- Form -->
@@ -21,7 +30,7 @@
             name="full-name"
             id="full-name"
             autocomplete="name"
-            class="hover:ring-primary-600 focus:ring-primary-600 dark:hover:ring-primary-400 dark:focus:ring-primary-400 bg-primary-50 dark:bg-primary-950 ring-primary-900/40 dark:ring-primary-200/40 placeholder:text-primary-950/60 dark:placeholder:text-primary-200/60 block w-full appearance-none rounded-md border-0 px-4 py-4 text-base ring-1 transition focus:outline-none focus:ring-2"
+            class="block w-full appearance-none rounded-md border-0 bg-primary-50 px-4 py-4 text-base ring-1 ring-primary-900/40 transition placeholder:text-primary-950/60 hover:ring-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-600 dark:bg-primary-950 dark:ring-primary-200/40 dark:placeholder:text-primary-200/60 dark:hover:ring-primary-400 dark:focus:ring-primary-400"
             placeholder="Full name"
             required
           />
@@ -35,24 +44,23 @@
             name="email"
             id="email"
             autocomplete="email"
-            class="hover:ring-primary-600 focus:ring-primary-600 dark:hover:ring-primary-400 dark:focus:ring-primary-400 bg-primary-50 dark:bg-primary-950 ring-primary-900/40 dark:ring-primary-200/40 placeholder:text-primary-950/60 dark:placeholder:text-primary-200/60 block w-full appearance-none rounded-md border-0 px-4 py-4 text-base ring-1 transition focus:outline-none focus:ring-2"
+            class="block w-full appearance-none rounded-md border-0 bg-primary-50 px-4 py-4 text-base ring-1 ring-primary-900/40 transition placeholder:text-primary-950/60 hover:ring-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-600 dark:bg-primary-950 dark:ring-primary-200/40 dark:placeholder:text-primary-200/60 dark:hover:ring-primary-400 dark:focus:ring-primary-400"
             placeholder="Email"
             required
             pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
-
           />
         </div>
         <div>
           <label for="phone" class="sr-only">Phone Number</label>
-          <input 
-              type="tel"
-              name="phone"
-              id="phone"
-              autocomplete="tel"
-              class="hover:ring-primary-600 focus:ring-primary-600 dark:hover:ring-primary-400 dark:focus:ring-primary-400 bg-primary-50 dark:bg-primary-950 ring-primary-900/40 dark:ring-primary-200/40 placeholder:text-primary-950/60 dark:placeholder:text-primary-200/60 block w-full appearance-none rounded-md border-0 px-4 py-4 text-base ring-1 transition focus:outline-none focus:ring-2"
-              placeholder="Phone Number"
-              required
-              pattern="^\+?\d{10,15}$"
+          <input
+            type="tel"
+            name="phone"
+            id="phone"
+            autocomplete="tel"
+            class="block w-full appearance-none rounded-md border-0 bg-primary-50 px-4 py-4 text-base ring-1 ring-primary-900/40 transition placeholder:text-primary-950/60 hover:ring-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-600 dark:bg-primary-950 dark:ring-primary-200/40 dark:placeholder:text-primary-200/60 dark:hover:ring-primary-400 dark:focus:ring-primary-400"
+            placeholder="Phone Number"
+            required
+            pattern="^\+?\d{10,15}$"
           />
         </div>
 
@@ -63,14 +71,14 @@
             name="message"
             id="message"
             rows="3"
-            class="hover:ring-primary-600 focus:ring-primary-600 dark:hover:ring-primary-400 dark:focus:ring-primary-400 bg-primary-50 dark:bg-primary-950 ring-primary-900/40 dark:ring-primary-200/40 placeholder:text-primary-950/60 dark:placeholder:text-primary-200/60 block w-full appearance-none rounded-md border-0 px-4 py-4 text-base ring-1 transition focus:outline-none focus:ring-2"
+            class="block w-full appearance-none rounded-md border-0 bg-primary-50 px-4 py-4 text-base ring-1 ring-primary-900/40 transition placeholder:text-primary-950/60 hover:ring-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-600 dark:bg-primary-950 dark:ring-primary-200/40 dark:placeholder:text-primary-200/60 dark:hover:ring-primary-400 dark:focus:ring-primary-400"
             placeholder="Message"
             required></textarea>
         </div>
 
         <div>
           <button
-            class="bg-primary-600 dark:bg-primary-400 hover:bg-primary-700 dark:hover:bg-primary-300 focus-visible:outline-primary-600 dark:focus-visible:outline-primary-400 dark:text-primary-950 inline-flex items-center justify-center rounded-full border border-transparent px-5 py-3 text-base font-medium text-white transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+            class="rounded-lg border border-transparent bg-primary-600 px-5 py-3 text-base font-medium text-white transition hover:bg-primary-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 dark:bg-primary-400 dark:text-primary-950 dark:hover:bg-primary-300 dark:hover:text-primary-50 dark:focus-visible:outline-primary-400"
             type="submit"
           >
             Submit
@@ -79,11 +87,20 @@
       </form>
 
       <!-- Popup Message -->
-      <div id="successPopup" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center">
-        <div class="bg-primary-600  text-primary-100 dark:bg-primary-100 dark:text-primary-600 rounded-lg p-6 relative max-w-sm mx-auto">
-          <button id="closePopup" class="absolute top-2 right-2 text-gray-500 hover:text-gray-700">&times;</button>
+      <div
+        id="successPopup"
+        class="bg-black/50 fixed inset-0 flex hidden items-center justify-center"
+      >
+        <div
+          class="relative mx-auto max-w-sm rounded-lg bg-primary-600 p-6 text-primary-100 dark:bg-primary-100 dark:text-primary-600"
+        >
+          <button id="closePopup" class="text-gray-500 hover:text-gray-700 absolute right-2 top-2"
+            >&times;</button
+          >
           <h3 class="text-xl font-medium">Form submitted successfully!</h3>
-          <p class="mt-2">Thank you! The form has been submitted successfully. We will reply to you soon!</p>
+          <p class="mt-2">
+            Thank you! The form has been submitted successfully. We will reply to you soon!
+          </p>
         </div>
       </div>
     </div>
@@ -91,58 +108,57 @@
 </section>
 
 <script>
-const form = document.getElementById("contactForm") as HTMLFormElement | null;
-const email = document.getElementById("email") as HTMLInputElement | null;
-const phone = document.getElementById("phone") as HTMLInputElement | null;
-const closePopupButton = document.getElementById("closePopup");
-const successPopup = document.getElementById("successPopup");
-const submitButton = form?.querySelector("button[type='submit']") as HTMLButtonElement | null;
+  const form = document.getElementById('contactForm') as HTMLFormElement | null;
+  const email = document.getElementById('email') as HTMLInputElement | null;
+  const phone = document.getElementById('phone') as HTMLInputElement | null;
+  const closePopupButton = document.getElementById('closePopup');
+  const successPopup = document.getElementById('successPopup');
+  const submitButton = form?.querySelector("button[type='submit']") as HTMLButtonElement | null;
 
-if (form && email && phone && closePopupButton && successPopup && submitButton) {
-  const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-  const phonePattern = /^\+?\d{10,15}$/;
+  if (form && email && phone && closePopupButton && successPopup && submitButton) {
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    const phonePattern = /^\+?\d{10,15}$/;
 
-  form.addEventListener("submit", async function (event) {
-    event.preventDefault();
+    form.addEventListener('submit', async function (event) {
+      event.preventDefault();
 
-    if (!emailPattern.test(email.value)) {
-      alert("Please enter a valid email address.");
-      email.focus();
-      return;
-    }
-
-    if (!phonePattern.test(phone.value)) {
-      alert("Please enter a valid phone number.");
-      phone.focus();
-      return;
-    }
-
-    const formData = new FormData(form); // TypeScript now recognizes 'form' as HTMLFormElement
-
-    try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: formData,
-      });
-
-      if (response.ok) {
-        successPopup.classList.remove("hidden");
-        successPopup.classList.add("flex");
-        submitButton.disabled = true; // Explicitly typed as HTMLButtonElement, so no error here
-        form.reset();
-      } else {
-        console.error("Error submitting form:", response.statusText);
+      if (!emailPattern.test(email.value)) {
+        alert('Please enter a valid email address.');
+        email.focus();
+        return;
       }
-    } catch (error) {
-      console.error("Error:", error);
-    }
-  });
 
-  closePopupButton.addEventListener("click", function () {
-    successPopup.classList.add("hidden");
-    successPopup.classList.remove("flex");
-    submitButton.disabled = false;
-  });
-}
+      if (!phonePattern.test(phone.value)) {
+        alert('Please enter a valid phone number.');
+        phone.focus();
+        return;
+      }
 
+      const formData = new FormData(form); // TypeScript now recognizes 'form' as HTMLFormElement
+
+      try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formData,
+        });
+
+        if (response.ok) {
+          successPopup.classList.remove('hidden');
+          successPopup.classList.add('flex');
+          submitButton.disabled = true; // Explicitly typed as HTMLButtonElement, so no error here
+          form.reset();
+        } else {
+          console.error('Error submitting form:', response.statusText);
+        }
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    });
+
+    closePopupButton.addEventListener('click', function () {
+      successPopup.classList.add('hidden');
+      successPopup.classList.remove('flex');
+      submitButton.disabled = false;
+    });
+  }
 </script>
