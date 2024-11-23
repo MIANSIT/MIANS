@@ -3,21 +3,21 @@ const testimonials = [
   {
     name: 'Rebecca Hayes',
     description: 'Designer',
-    image: '/MIANS/assets/testimonial-1.webp',
+    image: '/assets/testimonial-1.webp',
     message:
       '“Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis.”',
   },
   {
     name: 'Rosa Spencer',
     description: 'Team Leader',
-    image: '/MIANS/assets/testimonial-2.webp',
+    image: '/assets/testimonial-2.webp',
     message:
       '“Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis.”',
   },
   {
     name: 'Christina Upton',
     description: 'Manager',
-    image: '/MIANS/assets/testimonial-3.webp',
+    image: '/assets/testimonial-3.webp',
     message:
       '“Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis.”',
   },
@@ -31,7 +31,7 @@ const testimonials = [
         Trusted by the largest companies in the world
       </h2>
       <div
-        class="divide-primary-900/10 dark:divide-primary-300/10 grid divide-y lg:grid-cols-3 lg:divide-x lg:divide-y-0"
+        class="grid divide-y divide-primary-900/10 dark:divide-primary-300/10 lg:grid-cols-3 lg:divide-x lg:divide-y-0"
       >
         {
           testimonials.map((testimonial) => (
@@ -39,7 +39,7 @@ const testimonials = [
               <div class="flex flex-row gap-2">
                 {[...Array(3)].map(() => (
                   <svg
-                    class="text-primary-600 dark:text-primary-400 h-6 w-6"
+                    class="h-6 w-6 text-primary-600 dark:text-primary-400"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="currentColor"
@@ -49,14 +49,14 @@ const testimonials = [
                   </svg>
                 ))}
               </div>
-              <blockquote class="text-primary-950/70 dark:text-primary-200/70 text-center text-lg italic leading-loose">
+              <blockquote class="text-center text-lg italic leading-loose text-primary-950/70 dark:text-primary-200/70">
                 <p>{testimonial.message}</p>
               </blockquote>
               <figcaption class="flex flex-col gap-4">
                 <img class="mx-auto h-8 w-8 rounded-full" src={testimonial.image} alt="" />
                 <div class="text-center">
                   <div class="text-base font-medium">{testimonial.name}</div>
-                  <div class="text-primary-950/70 dark:text-primary-200/70 text-sm">
+                  <div class="text-sm text-primary-950/70 dark:text-primary-200/70">
                     {testimonial.description}
                   </div>
                 </div>

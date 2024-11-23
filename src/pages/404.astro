@@ -2,44 +2,43 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout
-  description="Page not found."
-  title="Not found · MIANS"
->
-  <section class="flex items-center justify-center min-h-screen py-16 sm:py-20">
+<Layout description="Page not found." title="Not found · MIANS">
+  <section class="flex min-h-screen items-center justify-center py-16 sm:py-20">
     <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
       <div class="flex flex-col items-center gap-8 sm:gap-10">
-        <div class="flex flex-col gap-4 sm:gap-6 text-center">
-          <h1 class="text-4xl font-medium tracking-tight sm:text-5xl lg:text-6xl flex flex-col items-center">
+        <div class="flex flex-col gap-4 text-center sm:gap-6">
+          <h1
+            class="flex flex-col items-center text-4xl font-medium tracking-tight sm:text-5xl lg:text-6xl"
+          >
             <img
-              class="h-20 w-auto mb-4"
+              class="mb-4 h-20 w-auto"
               width="80"
               height="80"
-              :src="$store.theme.isDark ? '/MIANS/assets/icon1.png' : '/MIANS/assets/icon2.png'"
+              :src="$store.theme.isDark ? '/assets/icon1.png' : '/assets/icon2.png'"
               alt="Stone"
               id="theme-logo"
             />
             <div>404</div>
             <div>Page not found</div>
           </h1>
-          <p class="text-primary-950/70 dark:text-primary-200/70 text-lg sm:text-xl">
+          <p class="text-lg text-primary-950/70 dark:text-primary-200/70 sm:text-xl">
             Please check the URL in the address bar and try again.
           </p>
         </div>
-        <div class="flex flex-col sm:flex-row gap-4">
-        <a
-          href="/MIANS"
-          class="bg-primary-600 dark:bg-primary-400 hover:bg-primary-700 dark:hover:bg-primary-300 focus-visible:outline-primary-600 dark:focus-visible:outline-primary-400 dark:text-primary-950 inline-flex items-center justify-center rounded-full border border-transparent px-5 py-3 text-base font-medium text-white transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
-        >
-          Go back Home
-        </a>
-        <a
-        href="/MIANS/contact"
-        class="bg-primary-600 dark:bg-primary-400 hover:bg-primary-700 dark:hover:bg-primary-300 focus-visible:outline-primary-600 dark:focus-visible:outline-primary-400 dark:text-primary-950 inline-flex items-center justify-center rounded-full border border-transparent px-5 py-3 text-base font-medium text-white transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
-      >
-        Contact Us
-      </a>
-    </div>
+        <div class="flex flex-col gap-4 sm:flex-row">
+          <a
+            href="/MIANS"
+            class="inline-flex items-center justify-center rounded-full border border-transparent bg-primary-600 px-5 py-3 text-base font-medium text-white transition hover:bg-primary-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 dark:bg-primary-400 dark:text-primary-950 dark:hover:bg-primary-300 dark:focus-visible:outline-primary-400"
+          >
+            Go back Home
+          </a>
+          <a
+            href="/MIANS/contact"
+            class="inline-flex items-center justify-center rounded-full border border-transparent bg-primary-600 px-5 py-3 text-base font-medium text-white transition hover:bg-primary-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 dark:bg-primary-400 dark:text-primary-950 dark:hover:bg-primary-300 dark:focus-visible:outline-primary-400"
+          >
+            Contact Us
+          </a>
+        </div>
       </div>
     </div>
   </section>
