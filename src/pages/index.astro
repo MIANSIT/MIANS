@@ -5,18 +5,20 @@ import Expertise from '../components/home/Expertise.astro';
 import Hero from '../components/home/Hero';
 import Services from '../components/home/Services';
 import Projects from '../components/home/Projects';
-// import Testimonials from '../components/home/Testimonials.astro';
+import Stats from '../components/home/Stats';
+import Testimonials from '../components/home/Testimonials.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout description="Reflection of Your Desire" title="MIANS ">
   <!-- <Hero /> -->
   <Hero client:load />
-  <Projects />
+  <Stats />
   <Services />
+  <Projects />
   <Expertise />
   <About />
-  <!-- <Testimonials /> -->
+  <Testimonials />
   <Cta />
 </Layout>
 <style>
