@@ -5,11 +5,11 @@ import 'swiper/css/navigation';
 import { useEffect } from 'react';
 
 const testimonials = [
-  { name: 'Emma Johnson', message: 'The team truly listened and brought our vision to life. The communication and dedication were top-notch.' },
-  { name: 'Daniel Smith', message: 'I was impressed with how smooth and professional the entire process was. Highly recommend them!' },
-  { name: 'Sophia Lee', message: 'They didn’t just deliver a project, they delivered confidence. I’d definitely work with them again.' },
-  { name: 'Michael Brown', message: 'They exceeded our expectations. Everything was done on time, and the results speak for themselves.' },
-  { name: 'Isabella Martinez', message: 'Working with them was a breeze. They understood our needs and delivered with precision.' },
+  { name: 'Albert', message: 'The team truly listened and brought our vision to life. The communication and dedication were top-notch.' },
+  { name: 'Samantha Johnston', message: 'I was impressed with how smooth and professional the entire process was. Highly recommend them!' },
+  { name: 'Leena Maladhari', message: 'They didn’t just deliver a project, they delivered confidence. I’d definitely work with them again.' },
+  { name: 'Neal Mehta', message: 'They exceeded our expectations. Everything was done on time, and the results speak for themselves.' },
+  { name: 'Khimily', message: 'Working with them was a breeze. They understood our needs and delivered with precision.' },
   { name: 'James Davis', message: 'We saw real results within weeks. Their expertise is unmatched in the field.' },
   { name: 'Olivia Wilson', message: 'The quality of work and their commitment to excellence stood out. A fantastic team to collaborate with.' },
   { name: 'William Taylor', message: 'From day one, they made us feel like a priority. The results were incredible.' },
