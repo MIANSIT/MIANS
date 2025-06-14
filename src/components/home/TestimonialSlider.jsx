@@ -5,15 +5,15 @@ import 'swiper/css/navigation';
 import { useEffect } from 'react';
 
 const testimonials = [
-  { name: 'Albert', message: 'The team truly listened and brought our vision to life. The communication and dedication were top-notch.' },
+  { name: 'Albert', message: 'The team truly listened and brought my vision to life. The communication and dedication were top-notch.' },
   { name: 'Samantha Johnston', message: 'I was impressed with how smooth and professional the entire process was. Highly recommend them!' },
+  { name: 'Valerie Ann Taylor', message: 'From day one, they made us feel like a priority. The results were incredible.' },
   { name: 'Leena Maladhari', message: 'They didn’t just deliver a project, they delivered confidence. I’d definitely work with them again.' },
-  { name: 'Neal Mehta', message: 'They exceeded our expectations. Everything was done on time, and the results speak for themselves.' },
-  { name: 'Khimily', message: 'Working with them was a breeze. They understood our needs and delivered with precision.' },
+  { name: 'Neal Mehta', message: 'They exceeded my expectations. Everything was done on time, and the results speak for themselves.' },
+  { name: 'Sayed Mridul Shanto', message: 'I loved the attention to detail and the level of creativity they brought to my project.' },
+  { name: 'Khimily', message: 'Working with them was a breeze. They understood my needs and delivered with precision.' },
   { name: 'James Davis', message: 'We saw real results within weeks. Their expertise is unmatched in the field.' },
   { name: 'Olivia Wilson', message: 'The quality of work and their commitment to excellence stood out. A fantastic team to collaborate with.' },
-  { name: 'William Taylor', message: 'From day one, they made us feel like a priority. The results were incredible.' },
-  { name: 'Ava Thomas', message: 'I loved the attention to detail and the level of creativity they brought to our project.' },
   { name: 'Liam White', message: 'They didn’t just deliver; they impressed at every step. Very professional and easy to work with.' },
 ];
 
