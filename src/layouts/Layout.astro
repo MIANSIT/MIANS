@@ -8,9 +8,11 @@ import Header from '../components/layout/Header.astro';
 interface Props {
   description: string;
   title: string;
+  image?: string; // optional OG preview image
 }
 
-const { description, title } = Astro.props;
+const { description, title, image } = Astro.props;
+const ogImage = image ?? '/assets/logo-inverted.png'; // default logo-inverted preview
 ---
 
 <!doctype html>
@@ -29,6 +31,20 @@ const { description, title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
     <title>{title}</title>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:url" content="https://www.miansofficial.com/" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
     <ViewTransitions />
   </head>
   <body
@@ -44,17 +60,19 @@ const { description, title } = Astro.props;
         display: none !important;
       }
       .custom-justify {
-        hyphens: auto; /* Enables word breaking with hyphens */
-        word-spacing: 0.01em; /* Adds slight space between words */
+        hyphens: auto;
+        word-spacing: 0.01em;
       }
     </style>
     <script>
       import Alpine from 'alpinejs';
       import collapse from '@alpinejs/collapse';
 
-      Alpine.plugin(collapse);
+      const AlpineInstance: any = Alpine; // <-- cast to any
 
-      Alpine.store('theme', {
+      AlpineInstance.plugin(collapse);
+
+      AlpineInstance.store('theme', {
         init() {
           this.isDark = (() => {
             if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
@@ -66,17 +84,15 @@ const { description, title } = Astro.props;
             return false;
           })();
         },
-
         isDark: false,
-
         toggle() {
           this.isDark = !this.isDark;
           localStorage.setItem('theme', this.isDark ? 'dark' : 'light');
         },
       });
 
-      window.Alpine = Alpine;
-      Alpine.start();
+      window.Alpine = AlpineInstance;
+      AlpineInstance.start();
     </script>
   </body>
 </html>
