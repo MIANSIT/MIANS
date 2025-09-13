@@ -26,9 +26,17 @@ const projects: Project[] = [
   {
     image: '/assets/crp.png',
     name: 'Valerie Taylor Trust',
-    description: 'The Valerie Taylor Trust is the UK support organisation for Centre for the Rehabilitation of the Paralysed.',
+    description:
+      'The Valerie Taylor Trust is the UK support organisation for Centre for the Rehabilitation of the Paralysed.',
     tags: ['Wordpress', 'CSS-3', 'Social Media'],
     link: 'https://www.crp-bangladesh.org/',
+  },
+  {
+    image: '/assets/aiProject.png',
+    name: 'Mians AI Chat',
+    description: 'AI-powered chatbot for smart, real-time conversations.',
+    tags: ['Next.js', 'Tailwind CSS', 'OpenAI API'],
+    link: 'https://mians-chatbot.vercel.app/',
   },
   {
     image: '/assets/pawfect.png',
@@ -60,7 +68,6 @@ const projects: Project[] = [
   },
 ];
 
-
 const Projects: React.FC = () => {
   return (
     <section className="py-16 sm:py-20" id="projects">
@@ -90,12 +97,14 @@ const Projects: React.FC = () => {
                   </a>
                   <div className="flex flex-grow flex-col gap-4">
                     <h3 className="text-xl font-bold">{project.name}</h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-300">{project.description}</p>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm">
+                      {project.description}
+                    </p>
                     <div className="mt-2 flex flex-wrap gap-2">
                       {project.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="border-green-500 text-green-600 rounded-full border bg-white dark:bg-primary-400/10 px-3 py-1 text-xs font-semibold"
+                          className="border-green-500 text-green-600 rounded-full border bg-white px-3 py-1 text-xs font-semibold dark:bg-primary-400/10"
                         >
                           {tag}
                         </span>
