@@ -1,0 +1,33 @@
+---
+import Timer from './Timer.astro';
+const { projectName = 'Project', launchDate } = Astro.props;
+---
+
+<section class="coming-soon relative my-12 rounded-2xl bg-gradient-to-r from-purple-600 via-pink-500 to-rose-500 shadow-2xl p-12 text-center  overflow-hidden">
+  <!-- Glow overlay -->
+  <div class="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-2xl pointer-events-none"></div>
+
+  <!-- Modern Project Name -->
+  <h2 class="relative mb-6 text-5xl font-extrabold tracking-tight">
+    <span class="bg-gradient-to-r from-violet-200 via-pink-200 to-rose-200 bg-clip-text  drop-shadow-lg">
+      ✨ {projectName} ✨
+    </span>
+  </h2>
+
+  <p class="relative mx-auto mb-10 max-w-xl text-lg md:text-xl text-zinc-100/90">
+    Get ready for something exciting. Stay tuned for the launch of {projectName}.
+  </p>
+
+  <!-- Timer -->
+  <Timer launchDate={launchDate} />
+</section>
+
+<style>
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+  .animate-blink {
+    animation: blink 1s infinite;
+  }
+</style>
