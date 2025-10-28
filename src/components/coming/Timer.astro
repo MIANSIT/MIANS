@@ -2,81 +2,116 @@
 const { launchDate } = Astro.props;
 ---
 
-<div
-  class="countdown flex justify-center gap-6 flex-wrap text-center"
-  data-launch={launchDate}
->
+<div class="countdown flex flex-wrap justify-center gap-6 text-center" data-launch={launchDate}>
   <!-- Days -->
-  <div class="time-box relative w-24 rounded-xl p-4 bg-zinc-900/60 backdrop-blur-md border border-zinc-700/50 shadow-lg transition duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(139,92,246,0.6)]">
-    <div class="flex items-center justify-center h-16 rounded-lg text-4xl font-bold  tracking-wider">
+  <div
+    class="time-box bg-gray-100 dark:bg-zinc-900/70 border-gray-300 dark:border-zinc-700
+    shadow-md relative
+    w-24 rounded-xl border
+    p-4 backdrop-blur-md transition duration-300
+    hover:scale-105
+    hover:shadow-[0_0_20px_rgba(0,0,0,0.3)]
+    dark:hover:shadow-[0_0_25px_rgba(255,255,255,0.6)]"
+  >
+    <div
+      class="text-black flex h-16 items-center justify-center rounded-lg text-4xl font-bold tracking-wider dark:text-white"
+    >
       <span class="days">00</span>
     </div>
-    <div class="mt-2 text-xs uppercase tracking-[0.2em] text-zinc-400">
-      Days
-    </div>
+    <div class="text-gray-600 dark:text-zinc-400 mt-2 text-xs uppercase tracking-[0.2em]">Days</div>
   </div>
 
   <!-- Hours -->
-  <div class="time-box relative w-24 rounded-xl p-4 bg-zinc-900/60 backdrop-blur-md border border-zinc-700/50 shadow-lg transition duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(139,92,246,0.6)]">
-    <div class="flex items-center justify-center h-16 rounded-lg text-4xl font-bold  tracking-wider">
+  <div
+    class="time-box bg-gray-100 dark:bg-zinc-900/70 border-gray-300 dark:border-zinc-700
+    shadow-md relative
+    w-24 rounded-xl border
+    p-4 backdrop-blur-md transition duration-300
+    hover:scale-105
+    hover:shadow-[0_0_20px_rgba(0,0,0,0.3)]
+    dark:hover:shadow-[0_0_25px_rgba(255,255,255,0.6)]"
+  >
+    <div
+      class="text-black flex h-16 items-center justify-center rounded-lg text-4xl font-bold tracking-wider dark:text-white"
+    >
       <span class="hours">00</span>
     </div>
-    <div class="mt-2 text-xs uppercase tracking-[0.2em] text-zinc-400">
+    <div class="text-gray-600 dark:text-zinc-400 mt-2 text-xs uppercase tracking-[0.2em]">
       Hours
     </div>
   </div>
 
   <!-- Minutes -->
-  <div class="time-box relative w-24 rounded-xl p-4 bg-zinc-900/60 backdrop-blur-md border border-zinc-700/50 shadow-lg transition duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(139,92,246,0.6)]">
-    <div class="flex items-center justify-center h-16 rounded-lg text-4xl font-bold  tracking-wider">
+  <div
+    class="time-box bg-gray-100 dark:bg-zinc-900/70 border-gray-300 dark:border-zinc-700
+    shadow-md relative
+    w-24 rounded-xl border
+    p-4 backdrop-blur-md transition duration-300
+    hover:scale-105
+    hover:shadow-[0_0_20px_rgba(0,0,0,0.3)]
+    dark:hover:shadow-[0_0_25px_rgba(255,255,255,0.6)]"
+  >
+    <div
+      class="text-black flex h-16 items-center justify-center rounded-lg text-4xl font-bold tracking-wider dark:text-white"
+    >
       <span class="minutes">00</span>
     </div>
-    <div class="mt-2 text-xs uppercase tracking-[0.2em] text-zinc-400">
+    <div class="text-gray-600 dark:text-zinc-400 mt-2 text-xs uppercase tracking-[0.2em]">
       Minutes
     </div>
   </div>
 
   <!-- Seconds -->
-  <div class="time-box relative w-24 rounded-xl p-4 bg-zinc-900/60 backdrop-blur-md border border-zinc-700/50 shadow-lg transition duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(139,92,246,0.6)]">
-    <div class="flex items-center justify-center h-16 rounded-lg text-4xl font-bold  tracking-wider animate-pulse text-violet-400">
+  <div
+    class="time-box bg-gray-100 dark:bg-zinc-900/70 border-gray-300 dark:border-zinc-700
+    shadow-md relative
+    w-24 rounded-xl border
+    p-4 backdrop-blur-md transition duration-300
+    hover:scale-105
+    hover:shadow-[0_0_20px_rgba(0,0,0,0.3)]
+    dark:hover:shadow-[0_0_25px_rgba(255,255,255,0.8)]"
+  >
+    <div
+      class="text-black animate-pulse flex h-16 items-center justify-center rounded-lg text-4xl font-bold tracking-wider dark:text-white"
+    >
       <span class="seconds">00</span>
     </div>
-    <div class="mt-2 text-xs uppercase tracking-[0.2em] text-zinc-400">
+    <div class="text-gray-600 dark:text-zinc-400 mt-2 text-xs uppercase tracking-[0.2em]">
       Seconds
     </div>
   </div>
 </div>
 
 <script type="module">
-const container = document.querySelector('.countdown');
-const launch = new Date(container.dataset.launch).getTime();
+  const container = document.querySelector('.countdown');
+  const launch = new Date(container.dataset.launch).getTime();
 
-const daysEl = container.querySelector(".days");
-const hoursEl = container.querySelector(".hours");
-const minutesEl = container.querySelector(".minutes");
-const secondsEl = container.querySelector(".seconds");
+  const daysEl = container.querySelector('.days');
+  const hoursEl = container.querySelector('.hours');
+  const minutesEl = container.querySelector('.minutes');
+  const secondsEl = container.querySelector('.seconds');
 
-function updateCountdown() {
-  const now = new Date().getTime();
-  const diff = launch - now;
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const diff = launch - now;
 
-  if (diff <= 0 || isNaN(launch)) {
-    container.textContent = "🚀 Launched!";
-    clearInterval(interval);
-    return;
+    if (diff <= 0 || isNaN(launch)) {
+      container.textContent = '🚀 Launched!';
+      clearInterval(interval);
+      return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+    daysEl.textContent = days.toString().padStart(2, '0');
+    hoursEl.textContent = hours.toString().padStart(2, '0');
+    minutesEl.textContent = minutes.toString().padStart(2, '0');
+    secondsEl.textContent = seconds.toString().padStart(2, '0');
   }
 
-  const days = Math.floor(diff / (1000*60*60*24));
-  const hours = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
-  const minutes = Math.floor((diff % (1000*60*60)) / (1000*60));
-  const seconds = Math.floor((diff % (1000*60)) / 1000);
-
-  daysEl.textContent = days.toString().padStart(2,'0');
-  hoursEl.textContent = hours.toString().padStart(2,'0');
-  minutesEl.textContent = minutes.toString().padStart(2,'0');
-  secondsEl.textContent = seconds.toString().padStart(2,'0');
-}
-
-const interval = setInterval(updateCountdown, 1000);
-updateCountdown();
+  const interval = setInterval(updateCountdown, 1000);
+  updateCountdown();
 </script>
