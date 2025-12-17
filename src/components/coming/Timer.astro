@@ -90,13 +90,54 @@ const { launchDate } = Astro.props;
   const hoursEl = container.querySelector('.hours');
   const minutesEl = container.querySelector('.minutes');
   const secondsEl = container.querySelector('.seconds');
-
+  const redirectUrl = 'https://www.sheihoise.com'; // change this to your target page
   function updateCountdown() {
     const now = new Date().getTime();
     const diff = launch - now;
 
     if (diff <= 0 || isNaN(launch)) {
-      container.textContent = '🚀 Launched!';
+      // Clear countdown numbers
+      daysEl.textContent = '';
+      hoursEl.textContent = '';
+      minutesEl.textContent = '';
+      secondsEl.textContent = '';
+
+      // Show launched message with clickable link
+      container.innerHTML = `
+       <div
+  class="launched-message cursor-pointer relative flex flex-col items-center justify-center
+         p-6 rounded-3xl  shadow-2xl
+          font-extrabold text-3xl tracking-widest
+         transition-transform duration-500 hover:scale-110 animate-bounce"
+>
+  <!-- Rocket icon floating above text -->
+  <div class="animate-float mb-2 text-5xl">🚀</div>
+
+  <!-- Main launched text with staggered letters -->
+  <div class="flex gap-2">
+    <span class="animate-fadeIn" style="animation-delay: 0s;">L</span>
+    <span class="animate-fadeIn" style="animation-delay: 0.1s;">a</span>
+    <span class="animate-fadeIn" style="animation-delay: 0.2s;">u</span>
+    <span class="animate-fadeIn" style="animation-delay: 0.3s;">n</span>
+    <span class="animate-fadeIn" style="animation-delay: 0.4s;">c</span>
+    <span class="animate-fadeIn" style="animation-delay: 0.5s;">h</span>
+    <span class="animate-fadeIn" style="animation-delay: 0.6s;">e</span>
+    <span class="animate-fadeIn" style="animation-delay: 0.7s;">d</span>
+    <span class="animate-fadeIn" style="animation-delay: 0.8s;">!</span>
+  </div>
+
+  <!-- Subtext -->
+  <div class="mt-3 text-lg font-medium text-yellow-300 tracking-wider animate-pulse">
+    Shei Hoise
+  </div>
+</div>
+      `;
+
+      // Add click listener to redirect
+      container.querySelector('.launched-message').addEventListener('click', () => {
+        window.open(redirectUrl, '_blank', 'noopener,noreferrer');
+      });
+
       clearInterval(interval);
       return;
     }
